@@ -19,7 +19,8 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 
 //connect to mongodb
-const mongodbURL = process.env.MONGODB_URI
+const mongodbURL = process.env.MONGODB_URI;
+mongoose
   .connect(mongodbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
