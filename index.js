@@ -19,8 +19,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 
 //connect to mongodb
-const mongodbURL = "mongodb+srv://drewgainey:TeuEmOSoc975cWxe@cluster0.dndkz.mongodb.net/greekResturants?retryWrites=true&w=majority";
-mongoose
+const mongodbURL = process.env.MONGODB_URI
   .connect(mongodbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
