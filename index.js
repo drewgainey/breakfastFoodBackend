@@ -29,11 +29,11 @@ mongoose
   .catch((err) => console.log(`error on db connection: ${err}`));
 
 //mount API router
-app.get("/", async (req, res, next) => {
+app.get("/resturants", async (req, res, next) => {
   const result = await getAllResturants();
   res.status(200).send(result);
 });
 
 app.listen(port, () => {
-  console.log(`API is ready on http://localhost:${3001}`);
+  console.log(`API is ready on http://localhost:${port}`);
 });
