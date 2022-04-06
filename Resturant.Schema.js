@@ -5,7 +5,7 @@ const RestaurantSchema = new Schema({
   name: String,
   lat: String,
   lon: String,
-  grapeLeaves: String
+  menus: Object
 });
 
 module.exports = {
